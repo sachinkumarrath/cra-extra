@@ -1,0 +1,20 @@
+{
+  "name": "cra-extra",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node ./scripts/loadCRA.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sachinkumarrath/cra-extra.git"
+  },
+  "author": "Sachin Rath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sachinkumarrath/cra-extra/issues"
+  },
+  "homepage": "https://github.com/sachinkumarrath/cra-extra#readme"
+}
