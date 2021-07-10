@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "start": "node ./scripts/loadCRA.js"
+    "cra-extra": "node ./scripts/loadCRA.js"
   },
   "repository": {
     "type": "git",
