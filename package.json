@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "cra-extra": "node ./scripts/loadCRA.js"
+  },
+  "bin": {
+    "cra-extra": "./scripts/loadCRA.js"
   },
   "repository": {
     "type": "git",
