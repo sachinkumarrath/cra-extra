@@ -5,7 +5,6 @@ const inquirer = require('inquirer');
 const frameworkTypes = ['react', 'ionic-react', 'angular', 'ionic-angular'];
 
 const askQuestions = async () => {
-
   const questions = [
     {
       type: 'list',
@@ -22,8 +21,22 @@ const askQuestions = async () => {
   const {appName, frameworkType} = await inquirer.prompt(questions);
   if (frameworkType === frameworkTypes[0]) {
     shell.exec(`npx create-react-app ${appName}`)
+  } else if (frameworkType === frameworkTypes[1]) {
+    const ionicQuestion = [
+      {
+        type: 'list',
+        name: 'ionicComponentType',
+        message: 'Choose the app type:',
+        default: 'blank',
+        choices: ['tabs', 'sidemenu', 'blank']
+      }
+    ];
+    const {ionicComponentType} = await inquirer.prompt(ionicQuestion);
+    shell.exec(`npx create-react-app ${appName}`)
+    shell.exec('npm install -g @ionic/cli');
+    shell.exec(`ionic start ${appName} ${ionicComponentType}`)
   } else {
-    console.error('select valid framwork')
+    console.error('select allowed framwork')
   }
 };
 
