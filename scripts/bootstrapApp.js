@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 const shell = require('shelljs');
 const inquirer = require('inquirer');
+const chalk = require('chalk');
 
 const frameworkTypes = ['react', 'ionic-react', 'angular', 'ionic-angular'];
 
@@ -36,12 +37,8 @@ const askQuestions = async () => {
     shell.exec('npm install -g @ionic/cli');
     shell.exec(`ionic start ${appName} ${ionicComponentType}`)
   } else {
-    console.error('select allowed framwork')
+    console.log(chalk.red('Exiting... Please select allowed framwork.'));
   }
 };
 
 askQuestions();
-
-
-
-// console.log('load CRA');
