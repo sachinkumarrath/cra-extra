@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {},
   "bin": {
-    "cra-extra": "./scripts/bootstrapApp.js"
+    "project-builder": "./scripts/bootstrapApp.js"
   },
   "repository": {
     "type": "git",
